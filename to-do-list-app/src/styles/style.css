@@ -1,61 +1,109 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: #062466 url('../annie-spratt-Ki0-ea-Hgx4-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f3f3f3;
+    font-family: 'Segoe UI', 'Roboto', 'Montserrat', 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #8f9ebd;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(14, 144, 167, 0.4);
+    padding: 32px 24px;
 }
 
 h1 {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 2rem;
     text-align: center;
-    color: #333;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
 }
 
-#task-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#add-task {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 15px;
+input[type="text"] {
+    width: 70%;
+    padding: 10px 14px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #09153d;
+    color: #f3ebeb;
+    margin-right: 12px;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1b4085;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
     cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.15);
 }
 
-#add-task:hover {
-    background-color: #218838;
+button:hover {
+    background: #7f8ba3;
 }
 
-#task-list {
-    list-style-type: none;
+ul#task-list {
+    list-style: none;
     padding: 0;
+    margin-top: 24px;
 }
 
-.task-item {
-    background-color: white;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+ul#task-list li {
+    background: #1b4085;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
+    font-size: 1.05rem;
 }
 
-.remove-task {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
+ul#task-list li button {
+    background: #995a5a;
+    color: #fff;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    box-shadow: none;
 }
 
-.remove-task:hover {
-    background-color: #c82333;
+ul#task-list li button:hover {
+    background: #c23a3a;
+}
+
+button#add-task-button {
+    animation: pulseAddBtn 1s infinite alternate;
+}
+
+@keyframes pulseAddBtn {
+    to {
+        transform: scale(1.08);
+        box-shadow: 0 4px 16px rgba(79,140,255,0.25);
+    }
+}
+
+#task-input {
+    margin-bottom: 12px;
+    display: block;
+}
+
+#add-task-button {
+    margin-left: 0;
+    margin-bottom: 8px;
+    display: block;
 }
